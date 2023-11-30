@@ -83,5 +83,114 @@
             "image": "https://i.ibb.co/QKZ8X2H/cook15.jpg",
             "email": "liam@example.com"
         }
+    },
+    {
+        "id": 7,
+  "meal_title": "Caprese Salad",
+  "description": "Delight in the simplicity of our Caprese Salad. Fresh tomatoes, mozzarella cheese, basil leaves, drizzled with balsamic glaze and olive oil. A light and refreshing appetizer.",
+  "img": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg",
+  "rating": 4.4,
+  "price": 9.99,
+  "category": "Dinner",
+  "ingredients": [
+    "Tomatoes",
+    "Mozzarella cheese",
+    "Basil leaves",
+    "Balsamic glaze",
+    "Olive oil"
+  ],
+  "owner": {
+    "name": "Sophia Lee",
+    "image": "https://i.ibb.co/LYV6prK/cook27.jpg",
+    "email": "sophia@example.com"
+  }
+    },
+    {
+        "id": 8,
+  "meal_title": "Grilled Salmon with Asparagus",
+  "description": "Treat yourself to a healthy and delicious dinner. Grilled salmon fillet seasoned with herbs, served alongside perfectly roasted asparagus spears. A delightful combination.",
+  "img": "https://kalejunkie.com/wp-content/uploads/2022/05/KALEJUNKIE-SHEET-PAN-LEMON-HERB-SALMON-1.jpg",
+  "rating": 4.7,
+  "price": 16.99,
+  "category": "Lunch",
+  "ingredients": [
+    "Salmon fillet",
+    "Asparagus",
+    "Herbs",
+    "Olive oil",
+    "Salt",
+    "Pepper"
+  ],
+  "owner": {
+    "name": "Oliver Clark",
+    "image": "https://i.ibb.co/4VY9d4s/cook25.jpg",
+    "email": "oliver@example.com"
+  }
+    },
+    {
+        "id": 9,
+  "meal_title": "Vegan Buddha Bowl",
+  "description": "Enjoy a nutritious and colorful meal with our Vegan Buddha Bowl. Quinoa, roasted vegetables, avocado slices, chickpeas, and a tangy tahini dressing. Packed with protein and flavor.",
+  "img": "https://assets-global.website-files.com/60da4419d98adf0a36dc660e/6171ad5ced87812863e86ba6_GrainFreeBuddhaBowl-2-1-scaled.jpg",
+  "rating": 4.6,
+  "price": 11.49,
+  "category": "Lunch",
+  "ingredients": [
+    "Quinoa",
+    "Roasted vegetables",
+    "Avocado",
+    "Chickpeas",
+    "Tahini dressing"
+  ],
+  "owner": {
+    "name": "Ava Miller",
+    "image": "https://i.ibb.co/NLWFhMW/cook20.jpg",
+    "email": "ava@example.com"
+  }
+    },
+    {
+        "id": 10,
+  "meal_title": "Savory Omelette",
+  "description": "Enjoy a hearty breakfast with our Savory Omelette. Made with farm-fresh eggs, diced bell peppers, onions, and a touch of cheese, this fluffy omelette bursts with flavor. Served with a side of crispy hash browns or buttered toast.",
+  "img": "https://www.savoryexperiments.com/wp-content/uploads/2013/01/Italian-Omelette-7-1.jpg",
+  "rating": 4.2,
+  "price": 8.49,
+  "category": "Breakfast",
+  "ingredients": [
+    "Eggs",
+    "Bell peppers",
+    "Onions",
+    "Cheese",
+    "Salt",
+    "Pepper"
+  ],
+  "owner": {
+    "name": "David Johnson",
+    "image": "https://i.ibb.co/ZdW09KZ/cook12.jpg",
+    "email": "david@example.com"
+  }
+    },
+    {
+        "id": 11,
+  "meal_title": "Mushroom Risotto",
+  "description": "Savor the creamy richness of our Mushroom Risotto. Arborio rice cooked slowly with mushrooms, onions, white wine, and finished with butter and Parmesan cheese.",
+  "img": "https://www.skinnytaste.com/wp-content/uploads/2009/10/Mushroom-Risotto_1-4.jpg",
+  "rating": 4.6,
+  "price": 15.99,
+  "category": "Dinner",
+  "ingredients": [
+    "Arborio rice",
+    "Mushrooms",
+    "Onions",
+    "White wine",
+    "Butter",
+    "Parmesan cheese"
+  ],
+  "owner": {
+    "name": "Isabella Garcia",
+    "image": "https://i.ibb.co/XjVRgW7/cook32.jpg",
+    "email": "isisabella@example.com"
+}
+
     }
 ]

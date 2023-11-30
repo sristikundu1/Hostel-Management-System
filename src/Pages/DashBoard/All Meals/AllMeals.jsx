@@ -3,10 +3,42 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import { MdSetMeal } from "react-icons/md";
 import useFood from "../../../Hooks/useFood";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 
 const AllMeals = () => {
-    const [allmeal] = useFood();
+    const [allmeal,refetch] = useFood();
+    const axiosSecure = useAxiosSecure();
+
+
+    const handleDelete = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/meals/${id}`)
+                    .then(res => {
+                       if(res.data.deletedCount > 0){
+                        refetch();
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                          });
+                       }
+                    })
+
+            }
+        });
+
+    }
 
     return (
         <div className="max-w-6xl mx-auto my-16">
@@ -61,7 +93,7 @@ const AllMeals = () => {
 
 
                                         <button
-                                            // onClick={() => handleDelete(user)}
+                                            onClick={() => handleDelete(food._id)}
                                             className="btn   bg-[#B91C1C] text-white rounded-lg"><RiDeleteBin6Fill className="text-xl"></RiDeleteBin6Fill></button>
                                     </th>
                                     <th>

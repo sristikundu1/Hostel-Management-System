@@ -8,14 +8,14 @@ const Footer = () => {
                 <div className="hero-overlay bg-opacity-80"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="flex flex-col gap-28 pt-16">
-                        <div className="flex justify-evenly items-center gap-28 text-[#e85d04]">
+                        <div className="grid grid-cols-1 lg:flex justify-evenly items-center gap-28 text-[#e85d04]">
                             <div className="space-y-5">
                                 <header className="footer-title text-[#e9d8a6]">Contact</header>
                                 <a className="link link-hover flex justify-center items-center gap-3 font-medium"><BsGeoAlt className="text-[#d5f2e3] text-2xl"></BsGeoAlt>Maple Street,City Center,Dhaka-1234</a>
                                 <a className="link link-hover flex justify-center items-center gap-3 font-medium"><BsFillPhoneFill className="text-[#d5f2e3] text-2xl"></BsFillPhoneFill>015743156789</a>
                                 <a className="link link-hover flex justify-center items-center gap-3 font-medium"><BsEnvelope className="text-[#d5f2e3] text-2xl"></BsEnvelope>AuraFeastForge@gmail.com</a>
                             </div>
-                            <div className=" border rounded-full p-7 mt-10">
+                            <div className=" border rounded-full p-10 mt-1 lg:p-7 lg:mt-10">
                                 <div className="flex gap-4">
                                     <img className="w-12 rounded-full" src="https://i.ibb.co/LQJJxrD/logo.jpg" alt="" />
                                     <h2 className=" text-3xl font-greate font-bold text-[#d00000]">AuraFeastForge</h2>
@@ -40,7 +40,7 @@ const Footer = () => {
                         <div>
 
 
-                            <div className="w-[1200px] bg-white h-1"></div>
+                            <div className="w-96 bg-white h-1 md:w-[740px] lg:w-[1200px] "></div>
 
                             <p className="text-[#e85d04] font-medium text-center mt-3">Copyright © 2023 - All right reserved</p>
                         </div>

@@ -10,7 +10,7 @@ const Card = ({ memberShip }) => {
         <div>
 
             <Link to={`/checkout/${id}`}>
-                <div className="relative flex w-full  h-[380px] flex-col rounded-xl bg-gradient-to-tr from-[#0b090a] to-[#161a1d] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40">
+                <div className="relative flex  flex-col rounded-xl bg-gradient-to-tr from-[#0b090a] to-[#161a1d] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40 w-[400px] h-[400px] md:w-full  md:h-[380px]">
                     <div className=" overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none border-white/10 bg-clip-border mb-3 pb-2">
                         <p className=" text-4xl antialiased font-normal leading-normal text-[#a4161a] font-mono uppercase">
                             {category}

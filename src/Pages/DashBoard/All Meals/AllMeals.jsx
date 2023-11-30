@@ -1,11 +1,12 @@
-import UseMeal from "../../../Hooks/UseMeal";
+// import UseMeal from "../../../Hooks/UseMeal";/
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import { MdSetMeal } from "react-icons/md";
+import useFood from "../../../Hooks/useFood";
 
 
 const AllMeals = () => {
-    const [meal] = UseMeal();
+    const [allmeal] = useFood();
 
     return (
         <div className="max-w-6xl mx-auto my-16">
@@ -13,7 +14,7 @@ const AllMeals = () => {
 
             <div className=" bg-[#FFF] border mx-16 ">
                 <div className="flex justify-start mt-24 bg-[#FFF] pl-14 py-10">
-                    <h2 className="text-[#151515] font-bold text-4xl font-cinzel ">Total Meals:{meal.length} </h2>
+                    <h2 className="text-[#151515] font-bold text-4xl font-cinzel ">Total Meals:{allmeal.length} </h2>
                 </div>
 
                 <div className="overflow-x-auto px-16">
@@ -35,7 +36,7 @@ const AllMeals = () => {
                         </thead>
                         <tbody>
                             {
-                                meal.map((food, index) => <tr key={food._id}>
+                                allmeal.map((food, index) => <tr key={food._id}>
                                     <th>
                                         {index + 1}
                                     </th>

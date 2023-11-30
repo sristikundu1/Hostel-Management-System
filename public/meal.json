@@ -1,0 +1,87 @@
+[
+    {
+        "id":1,
+        "meal_title": "Fluffy Pancakes",
+        "description": "Indulge in a delightful breakfast with our Fluffy Pancakes. Crafted from a blend of flour, milk, eggs, and a hint of baking powder, these pancakes are incredibly light and airy. Served with luscious maple syrup and your choice of toppings like fresh fruits or decadent whipped cream.",
+        "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/4/7/0/FNK_Fluffy-Japanese-Pancakes-H_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1491598033896.jpeg",
+        "rating": 3.8,
+        "price": 9.99,
+        "category": "Breakfast",
+        "ingredients": [
+            "Flour",
+            "Milk",
+            "Eggs",
+            "Baking powder",
+            "Salt",
+            "Maple syrup"
+          ],
+        "owner": {
+            "name": "Sophie Smith",
+            "image": "https://i.ibb.co/bKrPKSb/cook10.jpg",
+            "email": "sophie@example.com"
+        }
+    },
+    {
+        "id":2,
+        "meal_title": "Grilled Chicken Salad",
+        "description": "Revitalize your lunchtime with our Grilled Chicken Salad. Succulent grilled chicken strips atop a bed of mixed greens, accompanied by bursts of flavor from cherry tomatoes and cucumbers. All brought together with a tangy vinaigrette dressing, this salad is a nutritious and satisfying choice.",
+        "img": "https://gimmesomegrilling.com/wp-content/uploads/2021/05/Grilled-Chicken-Salad-Recipe-Square.jpg",
+        "rating": 4.5,
+        "price": 12.50,
+        "category": "Lunch",
+        "ingredients": [
+            "Grilled chicken",
+            "Mixed greens",
+            "Cherry tomatoes",
+            "Cucumbers",
+            "Vinaigrette dressing"
+          ],
+        "owner": {
+            "name": "David Johnson",
+            "image": "https://i.ibb.co/Vm5nDDn/cook12.webp",
+            "email": "david@example.com"
+        }
+    },
+    {
+        "id":3,
+        "meal_title": "Burger & Fries",
+        "img": "https://insanelygoodrecipes.com/wp-content/uploads/2020/02/Burger-and-Fries.jpg",
+        "description": "Savor our classic Burger & Fries for dinner. Choose between a juicy beef patty or a flavorful veggie option, embraced by a toasted bun. Complemented by fresh lettuce, tomato slices, onions, and tangy pickles, this dish is completed with a side of crispy golden fries.",
+        "rating": 4.9,
+        "price": 11.75,
+        "category": "Dinner",
+        "ingredients": [
+            "Beef patty/Veggie patty",
+            "Toasted bun",
+            "Lettuce",
+            "Tomato",
+            "Onions",
+            "Pickles",
+            "Potatoes (for fries)"
+          ],
+        "owner": {
+            "name": "Isabella Lee",
+            "image": "https://i.ibb.co/LRPFkWH/cook14.jpg",
+            "email": "isabella@example.com"
+        }
+    },
+    {
+        "id":4,
+        "meal_title": "Vegetable Stir-Fry",
+        "description": "Experience a burst of flavors with our Vegetable Stir-Fry. A harmonious blend of assorted fresh vegetables, such as bell peppers, broccoli, and carrots, expertly stir-fried in a savory sauce. Served generously over your choice of steamed rice or noodles.",
+        "img": "https://www.budgetbytes.com/wp-content/uploads/2022/03/Easy-Vegetable-Stir-Fry-close.jpg",
+        "rating": 4.7,
+        "price": 8.99,
+        "category": "Breakfast",
+        "ingredients": [
+            "Assorted vegetables (e.g., bell peppers, broccoli, carrots)",
+            "Stir-fry sauce",
+            "Rice/Noodles"
+          ],
+        "owner": {
+            "name": "Liam Miller",
+            "image": "https://i.ibb.co/QKZ8X2H/cook15.jpg",
+            "email": "liam@example.com"
+        }
+    }
+]

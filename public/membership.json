@@ -1,0 +1,33 @@
+[
+    {
+      "id":1,
+        "category": "Silver",
+        "price": 200,
+        
+          "f1": "Access to daily breakfast and dinner",
+          "f2": "Special discounts at partner restaurants",
+          "f3": "Priority scheduling for meal requests"
+        
+      },
+      {
+        "id":2,
+        "category": "Gold",
+        "price": 500,
+       
+          "f1": "Access to daily breakfast, lunch, and dinner",
+          "f2": "Exclusive access to a wider menu selection",
+          "f3": "Dedicated customer support for customization"
+        
+      },
+      {
+        "id":3,
+        "category": "Platinum",
+        "price": 800 ,
+      
+          "f1": "Full access to all meals (breakfast, lunch, dinner, snacks)",
+          "f2": "Personalized meal plans based on preferences",
+          "f3": "VIP dining experience and chef's specials"
+        
+      }
+      
+]

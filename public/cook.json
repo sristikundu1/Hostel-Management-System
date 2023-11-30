@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Elena Rodriguez",
+        "designation": "Head Chef",
+        "image": "https://i.ibb.co/kBJ8V8T/cook1.png"
+    },
+    {
+        "id": 2,
+        "name": "Liam Smith",
+        "designation": "Sous Chef",
+        "image": "https://i.ibb.co/gW9phXh/cook2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Sophie Johnson",
+        "designation": "Executive Chef",
+        "image": "https://i.ibb.co/XZ5ntBw/cook3.png"
+    },
+    {
+        "id": 4,
+        "name": "David Garcia",
+        "designation": "Pastry Chef",
+        "image": "https://i.ibb.co/HT7z7vJ/cook4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Emma Brown",
+        "designation": "Grill Master",
+        "image": "https://i.ibb.co/dkkmr2k/cook5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "William Nguyen",
+        "designation": "Sushi Chef",
+        "image": " https://i.ibb.co/CzvJxHB/cook7.png"
+    },
+    {
+        "id": 7,
+        "name": "Olivia Martinez",
+        "designation": "Salad Specialist",
+        "image": "https://i.ibb.co/HPPr9xK/cook6.jpg"
+    },
+    {
+        "id": 8,
+        "name": "James Wilson",
+        "designation": "Pasta Connoisseur",
+        "image": "https://i.ibb.co/mzVLCNp/cook8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Isabella Lee",
+        "designation": "Baker Extraordinaire",
+        "image": "https://i.ibb.co/NKVrTsJ/cook9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Noah Clark",
+        "designation": "Barbecue Expert",
+        "image": "https://i.ibb.co/bKrPKSb/cook10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Ava Taylor",
+        "designation": "Soup Maestro",
+        "image": "https://i.ibb.co/zRXk1Rg/cook11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Lucas Garcia",
+        "designation": "Asian Cuisine Specialist",
+        "image": "https://i.ibb.co/Vm5nDDn/cook12.webp"
+    },
+    {
+        "id": 13,
+        "name": "Mia White",
+        "designation": "Healthy Eating Advisor",
+        "image": "https://i.ibb.co/sg8zr5G/cook13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Ethan Kim",
+        "designation": "Dessert Artist",
+        "image": "https://i.ibb.co/LRPFkWH/cook14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Charlotte Nguyen",
+        "designation": "Culinary Innovator",
+        "image": "https://i.ibb.co/QKZ8X2H/cook15.jpg"
+    }
+]

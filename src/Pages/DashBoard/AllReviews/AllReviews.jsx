@@ -41,7 +41,7 @@ const AllReviews = () => {
     }
     return (
         <div className="max-w-6xl mx-auto my-16">
-        <h2 className="text-center font-bold text-3xl font-greate mb-5 text-[#370617]">My Requested Meals</h2>
+        <h2 className="text-center font-bold text-3xl font-greate mb-5 text-[#370617]">All Review</h2>
 
 
         <div className="overflow-x-auto px-16">

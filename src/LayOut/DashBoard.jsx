@@ -27,9 +27,9 @@ const DashBoard = () => {
                             <li className=" font-medium	text-xl"><NavLink to="/dashboard/users"><IoIosPeople></IoIosPeople>Manage Users</NavLink></li>
                             <li className=" font-medium	text-xl"><NavLink to="/dashboard/addmeal"><ImSpoonKnife></ImSpoonKnife>Add meal</NavLink></li>
                             <li className=" font-medium	text-xl"><NavLink to="/dashboard/allmeal"><FaListUl></FaListUl>All meals</NavLink></li>
-                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/myreview"><MdRateReview></MdRateReview> All reviews</NavLink></li>
-                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/myreview"><FaPlateWheat></FaPlateWheat> serve meals</NavLink></li>
-                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/myreview"><GiHotMeal></GiHotMeal>Upcoming meals</NavLink></li>
+                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/allreview"><MdRateReview></MdRateReview> All reviews</NavLink></li>
+                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/serve"><FaPlateWheat></FaPlateWheat> serve meals</NavLink></li>
+                            <li className=" font-medium	text-xl"><NavLink to="/dashboard/upcoming"><GiHotMeal></GiHotMeal>Upcoming meals</NavLink></li>
 
 
                         </> :

@@ -16,6 +16,7 @@ const MealDetails = () => {
     const axiosSecure = useAxiosSecure();
     const navigate = useNavigate();
     const location = useLocation();
+    // const [meal] = UseMeal();
 
     const [count, setCount] = useState(0);
     const [clicked, setClicked] = useState(false);

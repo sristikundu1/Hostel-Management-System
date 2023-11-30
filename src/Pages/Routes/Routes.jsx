@@ -16,6 +16,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import AdminProfile from "../DashBoard/AdminProfile/AdminProfile";
 import AdminRoute from "./AdminRoute";
 import AllMeals from "../DashBoard/All Meals/AllMeals";
+import UpcomingMeal from "../DashBoard/UpcomingMeal/UpcomingMeal";
 
 
 const Routes = createBrowserRouter([
@@ -85,7 +86,11 @@ const Routes = createBrowserRouter([
         },
         {
            path:"allmeal",
-           element:<AllMeals></AllMeals>
+           element:<AdminRoute><AllMeals></AllMeals></AdminRoute>
+        },
+        {
+          path:"upcoming",
+          element:<AdminRoute><UpcomingMeal></UpcomingMeal></AdminRoute>
         }
       ]
     }

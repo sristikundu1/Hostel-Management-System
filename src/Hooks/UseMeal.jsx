@@ -1,10 +1,10 @@
 import  { useEffect, useState } from 'react';
 
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "./useAxiosPublic";
+// import { useQuery } from "@tanstack/react-query";
+// import useAxiosPublic from "./useAxiosPublic";
 
 const UseMeal = () => {
- const axiosPublic = useAxiosPublic();
+//  const axiosPublic = useAxiosPublic();
     const [meal, setMeal] = useState([]);
     const [loading, setLoading] = useState(true);
 

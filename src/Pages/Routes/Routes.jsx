@@ -17,6 +17,9 @@ import AdminProfile from "../DashBoard/AdminProfile/AdminProfile";
 import AdminRoute from "./AdminRoute";
 import AllMeals from "../DashBoard/All Meals/AllMeals";
 import UpcomingMeal from "../DashBoard/UpcomingMeal/UpcomingMeal";
+import ServeMeals from "../DashBoard/ServeMeals/ServeMeals";
+import AllReviews from "../DashBoard/AllReviews/AllReviews";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const Routes = createBrowserRouter([
@@ -48,7 +51,7 @@ const Routes = createBrowserRouter([
         },
         {
           path:"/checkout/:id",
-          element:<CheckOut></CheckOut>
+          element:<PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>
         }
       ]
     },
@@ -91,6 +94,14 @@ const Routes = createBrowserRouter([
         {
           path:"upcoming",
           element:<AdminRoute><UpcomingMeal></UpcomingMeal></AdminRoute>
+        },
+        {
+          path:"serve",
+          element:<AdminRoute><ServeMeals></ServeMeals></AdminRoute>
+        },
+        {
+          path:"allreview",
+          element:<AdminRoute><AllReviews></AllReviews></AdminRoute>
         }
       ]
     }

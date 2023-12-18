@@ -44,12 +44,12 @@ const AllMeals = () => {
         <div className="max-w-6xl mx-auto my-16">
             <h2 className="text-center font-bold my-5 text-4xl text-[#370617] font-greate mt-12">All Meal</h2>
 
-            <div className=" bg-[#FFF] border mx-16 ">
+            <div className=" bg-[#FFF] border mx-6 ">
                 <div className="flex justify-start mt-24 bg-[#FFF] pl-14 py-10">
                     <h2 className="text-[#151515] font-bold text-4xl font-cinzel ">Total Meals:{allmeal.length} </h2>
                 </div>
 
-                <div className="overflow-x-auto px-16">
+                <div className="overflow-x-auto px-6">
 
                     <table className="table w-full ">
                         {/* head */}

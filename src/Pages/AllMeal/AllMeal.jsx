@@ -1,11 +1,13 @@
-import UseMeal from "../../Hooks/UseMeal";
+// import UseMeal from "../../Hooks/UseMeal";
+import useFood from "../../Hooks/useFood";
 import OrderTab from "../Home/OrderTab/OrderTab";
 
 
 const AllMeal = () => {
 
-    const [meal] = UseMeal();
-    const allMeal = meal
+    // const [meal] = UseMeal();
+    const [allmeal] = useFood();
+    const allMeals = allmeal
 
     return (
         <div className="max-w-6xl mx-auto my-12">
@@ -14,7 +16,7 @@ const AllMeal = () => {
 
             <input className="w-[1050px] h-11 p-4 rounded" type="text" placeholder="Search a meals by title......" name="" id="" />
                 <button className="btn bg-[#d00000] capitalize text-[#1F1717] font-bold text-xl">Search</button>
-              <OrderTab items={allMeal}></OrderTab>
+              <OrderTab items={allMeals}></OrderTab>
           
         </div>
     );

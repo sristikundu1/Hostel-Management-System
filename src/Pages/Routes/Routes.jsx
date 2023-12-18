@@ -20,6 +20,7 @@ import UpcomingMeal from "../DashBoard/UpcomingMeal/UpcomingMeal";
 import ServeMeals from "../DashBoard/ServeMeals/ServeMeals";
 import AllReviews from "../DashBoard/AllReviews/AllReviews";
 import PrivateRoutes from "./PrivateRoutes";
+import UpcommingMealNotification from "../UpcommingMealNotification/UpcommingMealNotification";
 
 
 const Routes = createBrowserRouter([
@@ -38,6 +39,10 @@ const Routes = createBrowserRouter([
           element:<AllMeal></AllMeal>
         },
         {
+          path:"/upcpmingmeal",
+          element:<UpcommingMealNotification></UpcommingMealNotification>
+        },
+        {
           path:"/login",
           element:<Login></Login>
         },
@@ -47,7 +52,8 @@ const Routes = createBrowserRouter([
         },
         {
           path:"/mealdetail/:id",
-          element:<MealDetails></MealDetails>
+          element:<MealDetails></MealDetails>,
+          loader:({params}) => fetch(`https://hostel-meal-management-system-server.vercel.app/meals/${params.id}`)
         },
         {
           path:"/checkout/:id",

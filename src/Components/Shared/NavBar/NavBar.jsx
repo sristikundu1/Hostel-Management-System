@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BsPersonCircle } from "react-icons/bs";
 import UseAuth from '../../../Hooks/UseAuth';
+import useUpcomming from '../../../Hooks/useUpcomming';
 
 const NavBar = () => {
-
+          
     const [isOpen, setIsOpen] = useState(false);
     const { user, logOut } = UseAuth()
+    const [upcomming] = useUpcomming()
 
 
     const handleLogOut = () => {
@@ -36,13 +38,13 @@ const NavBar = () => {
             }>Meals</NavLink></li>
 
         <li><NavLink
-            to="/dashboard/cart"
+            to="upcpmingmeal"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" :
                     isActive ? "text-[#dc2f02] font-extrabold  " : ''
             }> <button className="btn bg-transparent -mt-2">
                 <img className="w-6" src="https://i.ibb.co/nL372z4/upcoming-meal.png" alt="" />
-                <div className="badge badge-outline">+1</div>
+                <div className="badge badge-outline">{upcomming.length}</div>
             </button></NavLink></li>
     </>
 

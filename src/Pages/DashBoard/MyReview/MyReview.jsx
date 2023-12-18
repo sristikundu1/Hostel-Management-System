@@ -8,7 +8,10 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const MyReview = () => {
-    const[review,refetch] = useReview();
+
+    
+
+    const [review, refetch] = useReview();
     const axiosSecure = useAxiosSecure();
 
 
@@ -25,14 +28,14 @@ const MyReview = () => {
             if (result.isConfirmed) {
                 axiosSecure.delete(`/review/${id}`)
                     .then(res => {
-                       if(res.data.deletedCount > 0){
-                        refetch();
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "Your file has been deleted.",
-                            icon: "success"
-                          });
-                       }
+                        if (res.data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your review has been deleted.",
+                                icon: "success"
+                            });
+                        }
                     })
 
             }
@@ -67,20 +70,20 @@ const MyReview = () => {
                                     {review.meal}
                                 </td>
                                 <td>
-                                <button
+                                    <button
                                         // onClick={() => handleDelete(user)}
                                         className="btn   bg-[#B91C1C] text-white rounded-lg"><FaRegEdit className="text-xl"></FaRegEdit></button>
                                 </td>
                                 <td>
-                                <button
+                                    <button
                                         onClick={() => handleDelete(review._id)}
                                         className="btn   bg-[#B91C1C] text-white rounded-lg"><RiDeleteBin6Fill className="text-xl"></RiDeleteBin6Fill></button>
                                 </td>
                                 <th>
-                              <Link>
-                              <button
-                                        className="btn   bg-[#B91C1C] text-white rounded-lg"><MdSetMeal className="text-xl"></MdSetMeal></button>
-                              </Link>
+                                    <Link >
+                                        <button
+                                            className="btn   bg-[#B91C1C] text-white rounded-lg"><MdSetMeal className="text-xl"></MdSetMeal></button>
+                                    </Link>
                                 </th>
                             </tr>)
                         }

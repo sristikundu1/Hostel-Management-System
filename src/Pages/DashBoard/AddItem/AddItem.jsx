@@ -14,65 +14,6 @@ const AddItem = () => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
 
-
-    // const onSubmit = async (data, mealType) => {
-    //     // Your existing code for form submission remains unchanged
-
-    //     console.log(data)
-    //     const imageFile = { image: data.image[0] }
-    //     const res = await axiosPublic.post(image_hosting_api, imageFile, {
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data'
-    //         }
-    //     });
-    //     if (res.data.success) {
-    //         const menuItem = {
-    //             title: data.title,
-    //             category: data.category,
-    //             price: parseFloat(data.price),
-    //             recipe: data.recipe,
-    //             ingredients: data.ingredients,
-    //             rating: data.rating,
-    //             name: data.name,
-    //             email: data.email,
-    //             postdate: data.postdate,
-    //             image: res.data.data.display_url
-
-    //         }
-    //         if (mealType === 'upcoming') {
-    //             const upcomingmenuRes = await axiosSecure.post('/upcoming', menuItem);
-    //             console.log(upcomingmenuRes.data);
-
-    //             if (upcomingmenuRes.data.insertedId) {
-    //                 reset();
-    //                 Swal.fire({
-    //                     position: "top-end",
-    //                     icon: "success",
-    //                     title: `${data.title} added to your upcoming meal`,
-    //                     showConfirmButton: false,
-    //                     timer: 1500
-    //                 });
-    //             }
-    //         } else {
-    //             // Code to handle adding a regular meal
-    //             const menuRes = await axiosSecure.post('/meals', menuItem);
-    //             // const upcomingmenuRes = await axiosSecure.post('/upcoming', menuItem);
-    //             console.log(menuRes.data);
-    //             if (menuRes.data.insertedId) {
-    //                 reset();
-    //                 Swal.fire({
-    //                     position: "top-end",
-    //                     icon: "success",
-    //                     title: `${data.title} added to your cart`,
-    //                     showConfirmButton: false,
-    //                     timer: 1500
-    //                 });
-
-    //             }
-    //         }
-    //     };
-
-    // };
         const onSubmit = async (data) => {
             console.log(data)
             const imageFile = { image: data.image[0] }
@@ -88,52 +29,45 @@ const AddItem = () => {
                     price: parseFloat(data.price),
                     recipe: data.recipe,
                     ingredients: data.ingredients,
+                    description: data.description,
                     rating: data.rating,
                     name: data.name,
                     email: data.email,
+                    like: data.like,
+                    review: data.review,
                     postdate: data.postdate,
                     image: res.data.data.display_url
 
                 }
-                const menuRes = await axiosSecure.post('/meals', menuItem);
-                // const upcomingmenuRes = await axiosSecure.post('/upcoming', menuItem);
+                const endpoint = data.mealType == 'Running' ? 'meals' : 'upcoming'
+                // console.log(endpoint)
+                const menuRes = await axiosSecure.post(`/${endpoint}`, menuItem);
+              
                 console.log(menuRes.data);
 
-                // if (mealType === 'upcoming') {
-                //     const upcomingmenuRes = await axiosSecure.post('/upcoming', menuItem);
-                //     console.log(upcomingmenuRes.data);
-    
-                //     if (upcomingmenuRes.data.insertedId) {
-                //         reset();
-                //         Swal.fire({
-                //             position: "top-end",
-                //             icon: "success",
-                //             title: `${data.title} added to your upcoming meal`,
-                //             showConfirmButton: false,
-                //             timer: 1500
-                //         });
-                //     }
-                // } else {
-                //     if (menuRes.data.insertedId) {
-                //         reset();
-                //         Swal.fire({
-                //             position: "top-end",
-                //             icon: "success",
-                //             title: `${data.title} added to your cart`,
-                //             showConfirmButton: false,
-                //             timer: 1500
-                //         });
-                //     }
-                // }
+                
                 if(menuRes.data.insertedId)  {
                     reset();
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: `${data.title} added to your cart`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
+                    if(endpoint == 'meals'){
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: `${data.title} added to your meal`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+
+                    }
+                    else{
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: `${data.title} added to your upcomming meal`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                    
 
                 }
                 
@@ -165,6 +99,19 @@ const AddItem = () => {
                                     <option>Breakfast</option>
                                     <option>Lunch</option>
                                     <option>Dinner</option>
+                                </select>
+                            </div>
+
+                            <div className="w-1/2">
+                                <label className="label">
+                                    <span className="label-text text-[#444] font-semibold">Meal Type*</span>
+
+                                </label>
+                                <select defaultValue="default" {...register("mealType", { required: true })} className="select select-bordered w-full ">
+                                    <option disabled value="default">Meal Type</option>
+                                    <option>Running</option>
+                                    <option>Upcomming</option>
+                
                                 </select>
                             </div>
                         </div>
@@ -216,6 +163,22 @@ const AddItem = () => {
                             </div>
                         </div>
 
+                        <div className="w-full flex gap-3">
+                            <div className="w-1/2">
+                                <label className="label">
+                                    <span className="label-text text-[#444] font-semibold">Likes</span>
+                                </label>
+                                <input {...register("like", { required: true })} required className="w-full h-12 border-2 p-4 pl-5 rounded-lg" defaultValue= '0' type="text" name="like" id="like" />
+                            </div>
+
+                            <div className="form-control w-1/2">
+                                <label className="label">
+                                    <span className="label-text text-[#444] font-semibold">Reviews</span>
+                                </label>
+                                <input {...register("review", { required: true })} required className="w-full h-12 border-2 p-4 pl-5 rounded-lg" defaultValue='0' type="text" name="review" id="review" />
+                            </div>
+                        </div>
+
 
                         <div className="w-full flex gap-3 mb-10">
                             <div className="w-full">
@@ -227,7 +190,7 @@ const AddItem = () => {
                         </div>
                         <input {...register("image", { required: true })} type="file" className="file-input file-input-ghost bg-[#E8E8E8]" />
 
-                        <div className="flex justify-between">
+                        <div className="flex justify-center">
 
                             <input className="text-[#FFF] btn font-extrabold uppercase mr-3 bg-[#9d0208] my-10 " type="submit" value="Add meal"  />
                             {/* <button
@@ -235,7 +198,9 @@ const AddItem = () => {
                             className="text-[#FFF] btn font-extrabold uppercase mr-3 bg-[#9d0208] my-10 ">Add meal</button> */}
 
                             {/* <input className="text-[#FFF] btn font-extrabold uppercase mr-3 bg-[#9d0208] my-10 ">Add to Upcoming</input> */}
-                            <input className="text-[#FFF] btn font-extrabold uppercase mr-3 bg-[#9d0208] my-10 " type="submit" value="Add to Upcoming" onClick={() => handleSubmit(onSubmit)('upcoming')} />
+                            {/* <input className="text-[#FFF] btn font-extrabold uppercase mr-3 bg-[#9d0208] my-10 " type="submit" value="Add to Upcoming"  
+                            // onClick={() => handleSubmit(onSubmit)('upcoming')}
+                             {/* /> */}
 
                         </div>
 

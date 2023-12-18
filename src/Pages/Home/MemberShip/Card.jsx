@@ -5,7 +5,7 @@ const Card = ({ memberShip }) => {
 
     const { id,category, price, f1, f2, f3 } = memberShip;
 
-    console.log(category)
+    // console.log(category)
     return (
         <div>
 

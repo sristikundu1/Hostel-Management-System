@@ -7,7 +7,7 @@ const QAndA = () => {
             <p className="text-center mb-5 mt-2 text-xl text-[#003e1f]">Answers to Your Queries</p>
 
             <div className="collapse collapse-arrow bg-[#ffecd1]">
-                <input type="radio" name="my-accordion-2" checked="checked" />
+                <input type="radio" name="my-accordion-2"  />
                 <div className="collapse-title text-xl font-medium font-mono text-[#15616d]">
                 How do I sign up for the meal management system?
                 </div>

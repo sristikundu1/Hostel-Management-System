@@ -94,7 +94,7 @@ const SignUp = () => {
 
 
             <div className="bg-black">
-                {/* <div className="bg-[url(https://i.ibb.co/XJdhK0h/authentication.png)] h-screen"> */}
+              
 
                 <div className="max-w-6xl mx-auto pt-2 ">
 

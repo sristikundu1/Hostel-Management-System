@@ -76,7 +76,10 @@ const AllMeals = () => {
                                         {food.title}
                                     </td>
                                     <td>
-                                        {food.count}
+                                        {food.like}
+                                    </td>
+                                    <td>
+                                        {food.review}
                                     </td>
                                     <td>
                                     {food.name}

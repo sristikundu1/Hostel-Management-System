@@ -16,6 +16,8 @@ This is a Hostem Meal management System website
 - admin can add meal.
 - admin can see all users .
 
+ Admin Email : nidhu@gmail.com
+ Admin Password: Nidhu@1234
 
  [Visit Live Link](https://hostel-meal-system.web.app/)
 

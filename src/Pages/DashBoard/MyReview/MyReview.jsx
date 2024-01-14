@@ -9,7 +9,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const MyReview = () => {
 
-    
+
 
     const [review, refetch] = useReview();
     const axiosSecure = useAxiosSecure();
@@ -55,6 +55,7 @@ const MyReview = () => {
                         <tr className="bg-[#faa307] text-white h-16">
                             <th></th>
                             <th>Meal Title</th>
+                            <th>Review</th>
                             <th>Edit</th>
                             <th>Delete</th>
                             <th>View Meal</th>
@@ -68,6 +69,9 @@ const MyReview = () => {
                                 </th>
                                 <td>
                                     {review.meal}
+                                </td>
+                                <td>
+                                    {review.review}
                                 </td>
                                 <td>
                                     <button

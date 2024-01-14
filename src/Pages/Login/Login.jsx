@@ -21,7 +21,7 @@ const Login = () => {
        const navigate = useNavigate();
    
         
-       const { logIn, googleSignIn, logOut } = UseAuth();
+       const { logIn, googleSignIn } = UseAuth();
    
        const handleClickGoogle = () => {
            googleSignIn()

@@ -1,8 +1,40 @@
+import Swal from "sweetalert2";
 import useCart from "../../../Hooks/useCart";
 import { RiDeleteBin6Fill } from "react-icons/ri";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const RequestedMeal = () => {
-    const [cart] = useCart()
+    const [cart,refetch] = useCart();
+    const axiosSecure = useAxiosSecure();
+
+    const handleDelete = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/request/${id}`)
+                    .then(res => {
+                       if(res.data.deletedCount > 0){
+                        refetch();
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                          });
+                       }
+                    })
+
+            }
+        });
+
+    }
+
     return (
         <div className="max-w-6xl mx-auto my-16">
             <h2 className="text-center font-bold text-3xl font-greate mb-5 text-[#370617]">My Requested Meals</h2>
@@ -30,14 +62,14 @@ const RequestedMeal = () => {
                                     {meal.meal}
                                 </td>
                                 <td>
-                                    {meal.count}
+                                    {meal.like}
                                 </td>
                                 <td>
-                                    {meal.status}
+                                    <button className="btn font-medium">{meal.status}</button>   
                                 </td>
                                 <th>
                                     <button
-                                        // onClick={() => handleDelete(user)}
+                                        onClick={() => handleDelete(meal._id)}
                                         className="btn   bg-[#B91C1C] text-white rounded-lg"><RiDeleteBin6Fill className="text-xl"></RiDeleteBin6Fill></button>
                                 </th>
                             </tr>)

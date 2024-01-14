@@ -14,34 +14,32 @@ const MealDetails = () => {
     const mealdetails = useLoaderData();
     // const { user } = useContext(AuthContext);
 
-    const { _id, title, ingredients, description, rating, name, postdate, image } = mealdetails;
+    const { _id, title, ingredients, description, rating, name, postdate, image, like, review } = mealdetails;
 
     // Convert ingredients from string to an array
     const ingredientsArray = ingredients.split(', ');
 
     // Join the array back into a string with commas
-const joinedIngredients = ingredientsArray.join(', ');
+    const joinedIngredients = ingredientsArray.join(', ');
 
     const { id } = useParams();
-    // const [meals, setMeals] = useState({});
     const { user } = UseAuth();
     const axiosSecure = useAxiosSecure();
     const navigate = useNavigate();
     const location = useLocation();
-    // const [meal] = UseMeal();
 
-    const [count, setCount] = useState(0);
+
+    // const [count, setCount] = useState(0);
     const [clicked, setClicked] = useState(false);
 
-    const incrementCount = () => {
-        setCount(count + 1);
+    // const incrementCount = () => {
+    //     setCount(count + 1);
 
-        if (!clicked) {
-            setClicked(true);
-        }
-    };
+    //     if (!clicked) {
+    //         setClicked(true);
+    //     }
+    // };
 
-   
 
     const {
         register,
@@ -56,11 +54,6 @@ const joinedIngredients = ingredientsArray.join(', ');
         if (user && user.email) {
             //    insert data in the database
             const reviewItem = {
-                // menuId: id,
-                // email: user.email,
-                // name: user.displayName,
-                // meal: meals.meal_title,
-                // like: count
 
                 meal: data.title,
                 name: data.name,
@@ -73,15 +66,19 @@ const joinedIngredients = ingredientsArray.join(', ');
                 .then(res => {
                     console.log(res.data);
                     if (res.data.insertedId) {
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: `You review about ${data.title} meal `,
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        //   refetch the cart to update the cart items count
-                        // refetch();
+                        axiosSecure.put(`/meals/${_id}`)
+                            .then(res => {
+                                console.log(res.data)
+                                if (res.data.modifiedCount > 0) {
+                                    Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: `You review about ${data.title} meal `,
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                }
+                            })
                     }
                 })
         }
@@ -109,12 +106,10 @@ const joinedIngredients = ingredientsArray.join(', ');
             const requestItem = {
                 menuId: id,
                 name: user.displayName,
-                // email: user.email,
+                email: user.email,
                 meal: title,
-                like: count
-
-
             }
+            console.log(requestItem);
             axiosSecure.post("/request", requestItem)
                 .then(res => {
                     console.log(res.data);
@@ -148,6 +143,21 @@ const joinedIngredients = ingredientsArray.join(', ');
             });
         }
     }
+
+    const handleUpdateLike = id => {
+        axiosSecure.put(`/meals/${id}`)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.modifiedCount > 0) {
+                    if (!clicked) {
+                        setClicked(true);
+                    }
+                }
+
+            })
+    }
+
+
     return (
         <div>
             <Helmet>
@@ -190,15 +200,15 @@ const joinedIngredients = ingredientsArray.join(', ');
                                 </div>
 
                                 <div className="font-medium ">
-                                    <h2>(0 reviews)</h2>
+                                    <h2>{review}</h2>
                                 </div>
 
                                 <div>
                                     <button ><FaHeart
                                         className={clicked ? 'clicked' : ''}
                                         style={{ color: clicked ? '#780000' : '#cbc0d3', fontSize: '30px', marginRight: '10px' }}
-                                        onClick={incrementCount}></FaHeart></button>
-                                    <span className="font-bold">{count}</span>
+                                        onClick={handleUpdateLike}></FaHeart></button>
+                                    <span className="font-bold">{like}</span>
                                 </div>
 
                                 <div className="font-medium ">

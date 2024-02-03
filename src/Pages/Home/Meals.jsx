@@ -1,9 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
-// import Usemenu from "../../../Hooks/Usemenu";
-// import { useParams } from "react-router-dom";
-// import UseMeal from '../../Hooks/UseMeal';
 import OrderTab from './OrderTab/OrderTab';
 import useFood from '../../Hooks/useFood';
 
@@ -14,6 +11,8 @@ const Meals = () => {
     const [allmeal] = useFood();
 
     const [tabIndex, setTabIndex] = useState(0);
+
+
 
     // const categories = [' All Meals', 'Breakfast', 'Lunch', 'Dinner'];
     // const { category } = useParams();
@@ -43,13 +42,11 @@ const Meals = () => {
     const lunch = allmeal.filter(item => item.category === 'Lunch')
     const dinner = allmeal.filter(item => item.category === 'Dinner')
 
-    // const dessertItems = menu.filter(item => item.category === 'dessert')
-    // const drinkItems = menu.filter(item => item.category === 'drinks')
-
 
     return (
         <div>
-            <div className='max-w-5xl mx-auto mb-24 mt-28'>
+            <div className='max-w-5xl mx-auto mb-24 mt-28' data-aos="fade-up"
+                data-aos-duration="3000">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <TabList className="flex flex-row items-center justify-center gap-4">
                         <Tab className={`cursor-pointer p-2 border rounded  ${tabIndex === 0
@@ -69,12 +66,6 @@ const Meals = () => {
                             : 'bg-gray-200 text-gray-600 hover:bg-[#d00000]'
                             }`}>Dinner</Tab>
 
-
-                        {/* <Tab className="cursor-pointer p-2 border rounded hover:bg-[#d00000]">All Meals</Tab>
-                        <Tab className="cursor-pointer p-2 border rounded hover:bg-[#d00000]">Breakfast</Tab>
-                        <Tab className="cursor-pointer p-2 border rounded hover:bg-[#d00000]">Lunch</Tab>
-                        <Tab className="cursor-pointer p-2 border rounded hover:bg-[#d00000]">Dinner</Tab> */}
-
                     </TabList>
                     <TabPanel>
                         <OrderTab items={allMeal}></OrderTab>
@@ -91,7 +82,6 @@ const Meals = () => {
                         <OrderTab items={dinner}></OrderTab>
 
                     </TabPanel>
-
                 </Tabs>
             </div>
 

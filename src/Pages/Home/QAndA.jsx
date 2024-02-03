@@ -2,7 +2,8 @@
 
 const QAndA = () => {
     return (
-        <div className="max-w-6xl mx-auto my-16">
+        <div className="max-w-6xl mx-auto my-16"  data-aos="fade-up"
+        data-aos-duration="3000">
             <h2 className="text-center font-bold text-3xl text-[#370617]">FAQ - Hostel Meal Management System</h2>
             <p className="text-center mb-5 mt-2 text-xl text-[#003e1f]">Answers to Your Queries</p>
 

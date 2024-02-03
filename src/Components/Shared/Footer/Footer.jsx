@@ -7,7 +7,8 @@ const Footer = () => {
             <div className="hero min-h-[400px]" style={{ backgroundImage: 'url(https://i.ibb.co/hWYzGF5/footer.jpg)' }}>
                 <div className="hero-overlay bg-opacity-80"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="flex flex-col gap-28 pt-16">
+                    <div className="flex flex-col gap-28 pt-16" data-aos="zoom-in"
+        data-aos-duration="3000">
                         <div className="grid grid-cols-1 lg:flex justify-evenly items-center gap-28 text-[#e85d04]">
                             <div className="space-y-5">
                                 <header className="footer-title text-[#e9d8a6]">Contact</header>
@@ -29,7 +30,7 @@ const Footer = () => {
                             </div>
                             <div className="space-y-5">
                               
-                                    <header className="footer-title flex flex-row justify-start text-[#e9d8a6]">Legal</header>
+                                    <header className="footer-title flex flex-row justify-center text-[#e9d8a6] ">Legal</header>
                                     <p className="link link-hover font-medium">Terms of use</p>
                                     <p className="link link-hover font-medium">Privacy policy</p>
                                     <p className="link link-hover font-medium">Cookie policy</p>

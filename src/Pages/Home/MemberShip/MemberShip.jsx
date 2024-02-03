@@ -12,7 +12,8 @@ const MemberShip = () => {
             )
     }, [])
     return (
-        <div className="max-w-6xl mx-auto ">
+        <div className="max-w-6xl mx-auto "  data-aos="fade-up"
+        data-aos-duration="3000">
             <h2 className="text-center font-bold text-3xl text-[#370617] mb-5">Membership Packages</h2>
 
          <div className="grid mb-10 md:grid-cols-2 lg:grid-cols-3 gap-3 ">

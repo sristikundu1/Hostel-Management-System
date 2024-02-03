@@ -6,14 +6,16 @@ import QAndA from "./QAndA";
 import MemberShip from "./MemberShip/MemberShip";
 
 
+
 const Home = () => {
+  
     return (
         <div>
               <Helmet>
                 <title>Aura | Home</title>
             </Helmet>
             <Banner></Banner>
-            <Meals ></Meals>
+            <Meals></Meals>
             <Cook></Cook>
             <QAndA></QAndA>
             <MemberShip></MemberShip>

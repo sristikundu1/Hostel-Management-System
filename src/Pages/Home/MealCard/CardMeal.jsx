@@ -8,8 +8,8 @@ const CardMeal = ({ item }) => {
 
     return (
         <div>
-            <div className="card w-80 h-96 bg-base-100 shadow-xl">
-                <figure className="h-56 w-full"><img src={image} alt="Shoes" /></figure>
+            <div className="card w-80 h-96 bg-base-100 shadow-xl group">
+                <figure className="h-56 w-full group-hover:scale-110 object-cover"><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p>Price:{price}Tk</p>
